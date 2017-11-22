@@ -12,13 +12,17 @@ figure; hold on;
 %               examples and 'ko' for the negative examples.
 %
 
+% Find Indices of Positive and Negative Examples
+pos = find(y==1); neg = find(y == 0);
 
+%pos and neg are both vectors holding the indices of the positive and negative items (respectively)
 
+% Plot Examples
 
+% We pass the values of X at given indexes by passing the pos and neg vectors
 
-
-
-
+plot(X(pos, 1), X(pos, 2), 'k+','LineWidth', 2, 'MarkerSize', 7);
+plot(X(neg, 1), X(neg, 2), 'ko', 'MarkerFaceColor', 'y', 'MarkerSize', 7);
 
 % =========================================================================
 
